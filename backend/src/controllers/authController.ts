@@ -10,7 +10,7 @@ const authController = {
     register: AsyncHandler(async (req: Request, res: Response) => {
         const userInput: RegisterUserDto = req.body;
         const data = await authService.registerUser(userInput)
-        sendSuccess(res, data, 201, "User registerd successfully")
+        sendSuccess(res, {email:data.email, username:data.username}, 201, "User registerd successfully")
     }),
     login: AsyncHandler(async (req: Request, res: Response) => {
         const loginUserInput: LoginUserDto = req.body

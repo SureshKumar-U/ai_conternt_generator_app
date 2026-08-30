@@ -34,7 +34,8 @@ export const registerUser = async (data: RegisterUserDto) => {
         throw BadRequest("user already have an account");
     }
     const encryptedPassword = await bcrypt.hash(password, 18);
-    const newUser = await userModel.create({ username, email, password:encryptedPassword });
+    const traiExpireDate  =  new Date( new Date().getTime() +  3 * 24 * 60 * 60 * 1000)
+    const newUser = (await userModel.create({ username, email, password:encryptedPassword ,trialExpires:traiExpireDate}));
     return newUser;
 
 };
