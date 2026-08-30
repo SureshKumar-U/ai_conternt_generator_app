@@ -1,0 +1,305 @@
+@import "tailwindcss";
+
+@theme inline {
+
+
+   /* -------------------------
+     Typography Font Sizes
+     ------------------------- */
+   --text-xs: var(--font-size-xs);
+   --text-sm: var(--font-size-sm);
+   --text-md: var(--font-size-md);
+   --text-lg: var(--font-size-lg);
+   --text-xl: var(--font-size-xl);
+
+
+   /* -------------------------
+     spacing — Synthetix
+     ------------------------- */
+
+   --spacing-sm: var(--space-sm);
+   --spacing-md: var(--space-md);
+   --spacing-lg: var(--space-lg);
+   --spacing-xl: var(--space-xl);
+
+
+   --color-background: var(--background);
+   --color-foreground: var(--foreground);
+
+   --color-card: var(--card);
+   --color-card-foreground: var(--card-foreground);
+
+   --color-popover: var(--popover);
+   --color-popover-foreground: var(--popover-foreground);
+
+   --color-primary: var(--primary);
+   --color-primary-foreground: var(--primary-foreground);
+
+   --color-secondary: var(--secondary);
+   --color-secondary-foreground: var(--secondary-foreground);
+
+   --color-muted: var(--muted);
+   --color-muted-foreground: var(--muted-foreground);
+
+   --color-accent: var(--accent);
+   --color-accent-foreground: var(--accent-foreground);
+
+   --color-destructive: var(--destructive);
+   --color-destructive-foreground: var(--destructive-foreground);
+
+   --color-border: var(--border);
+   --color-input: var(--input);
+   --color-ring: var(--ring);
+
+   /* -------------------------
+     Colors — Synthetix
+     ------------------------- */
+
+   --color-surface: var(--surface);
+   --color-surface-dim: var(--surface-dim);
+   --color-surface-bright: var(--surface-bright);
+
+   --color-surface-container-lowest: var(--surface-container-lowest);
+   --color-surface-container-low: var(--surface-container-low);
+   --color-surface-container: var(--surface-container);
+   --color-surface-container-high: var(--surface-container-high);
+   --color-surface-container-highest: var(--surface-container-highest);
+
+   --color-surface-variant: var(--surface-variant);
+
+   --color-on-surface: var(--on-surface);
+   --color-on-surface-variant: var(--on-surface-variant);
+
+   --color-inverse-surface: var(--inverse-surface);
+   --color-inverse-on-surface: var(--inverse-on-surface);
+
+   --color-outline: var(--outline);
+   --color-outline-variant: var(--outline-variant);
+
+   --color-surface-tint: var(--surface-tint);
+
+   --color-primary-container: var(--primary-container);
+   --color-primary-container-foreground: var(--on-primary-container);
+
+   --color-inverse-primary: var(--inverse-primary);
+
+   --color-secondary-container: var(--secondary-container);
+   --color-secondary-container-foreground: var(--on-secondary-container);
+
+   --color-tertiary: var(--tertiary);
+   --color-tertiary-foreground: var(--on-tertiary);
+
+   --color-tertiary-container: var(--tertiary-container);
+   --color-tertiary-container-foreground: var(--on-tertiary-container);
+
+   --color-error: var(--error);
+   --color-error-foreground: var(--on-error);
+
+   --color-error-container: var(--error-container);
+   --color-error-container-foreground: var(--on-error-container);
+
+   /* -------------------------
+     Typography
+     ------------------------- */
+
+   --font-sans: "Inter", system-ui, sans-serif;
+   --font-heading: "Inter", system-ui, sans-serif;
+   --font-label: "Geist", system-ui, sans-serif;
+   --font-mono: ui-monospace, Consolas, monospace;
+
+   /* -------------------------
+     Radius
+     ------------------------- */
+
+   --radius-sm: 0.25rem;
+   --radius-md: 0.5rem;
+   --radius-lg: 0.75rem;
+   --radius-xl: 1rem;
+   --radius-2xl: 1.5rem;
+   --radius-full: 9999px;
+}
+
+/* =========================================================
+   Design Tokens
+   ========================================================= */
+
+:root {
+
+   --font-size-xs: 0.75rem;
+   /* 12px */
+   --font-size-sm: 0.875rem;
+   /* 14px */
+   --font-size-md: 1rem;
+   /* 16px */
+   --font-size-lg: 1.25rem;
+   /* 20px */
+   --font-size-xl: 1.5rem;
+   /* 24px */
+
+
+
+
+   /* =======================================================
+     Background
+     ======================================================= */
+
+   --background: #101415;
+   --foreground: #e0e3e5;
+
+   /* =======================================================
+     Surface / Tonal Layers
+     ======================================================= */
+
+   --surface: #101415;
+   --surface-dim: #101415;
+   --surface-bright: #363a3b;
+
+   --surface-container-lowest: #0b0f10;
+   --surface-container-low: #191c1e;
+   --surface-container: #1d2022;
+   --surface-container-high: #272a2c;
+   --surface-container-highest: #323537;
+
+   --surface-variant: #323537;
+
+   --on-surface: #e0e3e5;
+   --on-surface-variant: #cbc3d7;
+
+   --inverse-surface: #e0e3e5;
+   --inverse-on-surface: #2d3133;
+
+   /* =======================================================
+     Primary — Vibrant Purple
+     ======================================================= */
+
+   --primary: #d0bcff;
+   --primary-foreground: #3c0091;
+
+   --primary-container: #a078ff;
+   --on-primary-container: #340080;
+
+   --inverse-primary: #6d3bd7;
+
+   /* =======================================================
+     Secondary — Deep Indigo
+     ======================================================= */
+
+   --secondary: #c4c1fb;
+   --secondary-foreground: #2d2a5b;
+
+   --secondary-container: #444173;
+   --on-secondary-container: #b3afe9;
+
+   /* =======================================================
+     Tertiary — Cyber Cyan
+     ======================================================= */
+
+   --tertiary: #4cd7f6;
+   --on-tertiary: #003640;
+
+   --tertiary-container: #009eb9;
+   --on-tertiary-container: #002f38;
+
+   /* =======================================================
+     Error
+     ======================================================= */
+
+   --destructive: #ffb4ab;
+   --destructive-foreground: #690005;
+
+   --error: #ffb4ab;
+   --on-error: #690005;
+
+   --error-container: #93000a;
+   --on-error-container: #ffdad6;
+
+   /* =======================================================
+     Borders / Focus
+     ======================================================= */
+
+   --outline: #958ea0;
+   --outline-variant: #494454;
+
+   --border: #494454;
+   --input: #494454;
+   --ring: #d0bcff;
+
+   /* =======================================================
+     Accent
+     ======================================================= */
+
+   --accent: #323537;
+   --accent-foreground: #e0e3e5;
+
+   /* =======================================================
+     Typography
+     ======================================================= */
+
+   --font-body: "Inter", system-ui, sans-serif;
+   --font-heading: "Inter", system-ui, sans-serif;
+   --font-label: "Geist", system-ui, sans-serif;
+   --font-mono: ui-monospace, Consolas, monospace;
+
+
+   /* =======================================================
+     spacing
+   ======================================================= */
+   --space-sm: 1rem;
+   --space-md: 1.5rem;
+   --space-lg: 2rem;
+   --space-xl: 2.5rem;
+
+   /* =======================================================
+     Shape
+     ======================================================= */
+
+   --radius: 0.5rem;
+
+   /* =======================================================
+     Shadows / Glow
+     ======================================================= */
+
+   --shadow-glow-primary:
+      0 0 24px rgb(208 188 255 / 15%);
+
+   --shadow-glow-tertiary:
+      0 0 24px rgb(76 215 246 / 15%);
+
+   --shadow-surface:
+      0 10px 30px rgb(0 0 0 / 20%);
+}
+
+/* =========================================================
+   Base Styles
+   ========================================================= */
+
+@layer base {
+   * {
+      @apply border-border;
+   }
+
+   html {
+      font-size: 16px;
+      font-family: var(--font-body);
+      color-scheme: dark;
+   }
+
+}
+
+.glass-panel {
+   background: rgba(25, 28, 30, 0.4);
+   backdrop-filter: blur(20px);
+   -webkit-backdrop-filter: blur(20px);
+   border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glow-effect:hover {
+   box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+}
+
+.gradient-text {
+   background: linear-gradient(to right, #4cd7f6, #d0bcff);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+}
