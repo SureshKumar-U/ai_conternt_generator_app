@@ -16,3 +16,4 @@ export const forbidden = (message: string, details?: unknown) => new ApiError(me
 export const conflict = (message: string, details?: unknown) => new ApiError(message,409, details);
 export const notFound = (message: string, details?: unknown) => new ApiError(message,404, details);
 
+export const LimitExceededError  =  (message: string, details?: unknown) => new ApiError(message,429, details);

@@ -60,6 +60,10 @@ const userSchema = new mongoose.Schema(
   }
 );
 
+
+userSchema.methods.isTrialActive = function(){
+  
+}
 //! Compile to form the model
 const User = mongoose.model("User", userSchema);
 

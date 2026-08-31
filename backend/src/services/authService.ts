@@ -14,7 +14,6 @@ export const loginUser = async (loginUserInput: LoginUserDto) => {
     if (!existedUser) {
         throw UnauthorizedUser();
     }
-
     const isPasswordMatch = await bcrypt.compare(password, existedUser.password);
     if (!isPasswordMatch) {
         throw UnauthorizedUser();
@@ -22,8 +21,6 @@ export const loginUser = async (loginUserInput: LoginUserDto) => {
     const token = jwt.sign({ id: existedUser?._id }, envConfig.JWT_SECRET, {
         expiresIn: "2d", //token expires in 3 days
     })
-
-
     return token
 
 };
